@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>forms in html</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: linear-gradient(to top right, rgb(66, 66, 231),lightblue);
+        background-repeat: no-repeat;
+        background-size:cover;
+        background-attachment: fixed;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 40px;
+        color: white;
+        text-shadow: 2px 2px 8px rgb(66, 66, 231),2px 2px 8px rgb(66, 66, 231) ;
+      }
+      form {
+        max-width: 500px;
+        margin: 50px auto;
+        padding: 20px 20px;
+        border: 2px solid rgba(0, 0, 0,0.5);
+        box-shadow: 3px 5px 10px rgba(0, 0, 0,0.5) ;
+        border-radius: 5px;
+      }
+      form label {
+        display: block;
+        margin-bottom: 5px;
+      }
+     .container [type="radio"],.container input[type="checkbox"] {
+        display: inline-block;
+        width: auto;
+     }
+     .container {
+      margin-bottom: 10px;
+     }
+  
+     .container input, .container select,.container textarea {
+      width: 90%;
+      padding: 5px;
+      margin-top: 10px;
+      font-family: inherit;
+     }
+     .title {
+      font-size: 20px ;
+      margin-bottom: 5px;
+      margin-top: 5px;
+      color: white;
+     }
+     .container input {
+      border:2px solid #777;
+     }
+     .container button {
+      width: 90%;
+      padding: 5px;
+     }
+     .container_submit {
+      margin-top: 30px;
+      font-size:15px;
+     }
+     @media only screen and (max-width:600px ) {
+      form {
+        max-width:100%;
+        margin: 50px 0px;
+      }
+     }
+    </style>
+</head>
+<body>
+    <h2>html forms</h2>
+ <form action="" method="grt" autocomplete="on" >
+    <div class="container">
+      <label for="username" style="font-size: 125%;" class="title">Username:</label>
+      <input type="text" name="username"  ;" placeholder="enter your name" id="username">
+
+    </div>
+    <div class="container">
+      <label for="password" style="font-size: 125%;" class="title">Password:</label>
+      <input type="password" name="password"id="password" minlength="4" maxlength="8"placeholder="enter your password" ;>
+      <div>
+        <label for="dob" class="title">DOB:</label>
+        <input type="date" id="dob" max="2023-12-12" min="2000-01-01">
+    </div>
+    <div class="container">
+      <label for="email" style="font-size: 125%;" class="title">Email:</label>
+      <input type="email"name="email" id="email">
+    </div>
+    <div class="container">
+    <label for="about" class="title">About:</label><br>
+      <textarea name="about" id="about" cols="30" rows="10"></textarea>
+    </div>
+    <div class="container">
+      <label class="title">Gender</label>
+      <label for="male"><input type="radio" id="male" value="male" name="gender">Male</input></label>
+      <label for="female"><input type="radio" id="female" name="gender">Female</input></label>
+    </div>
+    <div class="container">
+      <label for="" class="title">Known laguages</label>
+      <label ><input type="checkbox" id="tamil" name="tamil">Tamil</input></label>
+    
+      <label for="english"><input type="checkbox" id="english" name="english"></input>
+        English</label>
+    </div>
+    <div class="container">
+      <label for="district" class="title">choose district:</label>
+      <select name="district" id="district">
+        <option value="villupuram">Villupuram</option>
+        <option value="tiruvannamalai">Tiruvannamalai</option>
+        <option value="chennai">Chennai</option>
+      </select>
+    </div>
+    <div class="container">
+      <label for="favcolor" class="title">favourite colour:</label>
+      <input type="color"value="#ffff00" id="favcolor" name="favcolor"><br>
+      <label for="mmyy" class="title">month & year:</label>
+      <input type="month" id="mmyy"><br>
+      <label for="marks" class="title">Enter your marks:</label>
+      <input type="number" name="marks" id="marks" min="1" max="100"><br>
+      <label for="phone" class="title">phone:</label>
+      <input type="tel" name="phone" id="phone"placeholder="12345-67890" pattern="[0-9]{5}-{0-9}{5}"> <br>
+      <label for="file" class="title">Upload File:</label>
+      <input type="file" id="file" name="file" style="border: none;">
+    </div>
+    <div class="container_submit">  
+      <button type="submit">submit</button>
+   
+      <input type="reset" name="reset">
+    </div>
+
+</form>
+
+</body>
+</html>
